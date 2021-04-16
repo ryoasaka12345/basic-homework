@@ -1,6 +1,7 @@
 <?php
 
-function judgePrime ($n) {
+function judgePrime($n)
+{
     for ($i = 2; $i <= $n; $i++) {
         if ($n % $i == 0) {
             break;

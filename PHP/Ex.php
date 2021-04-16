@@ -5,12 +5,12 @@
     $min = $a[0];
     $max = $a[0];
 
-    foreach($a as $key => $value){
-        if ($value < $min){
+    foreach($a as $key => $value) {
+        if ($value < $min) {
             $min = $value;
         }
 
-        if ($value > $min){
+        if ($value > $max) {
             $max = $value;
         }
     }

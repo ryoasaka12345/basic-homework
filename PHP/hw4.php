@@ -1,19 +1,40 @@
 <?php
 
-$n = 20;
-$ans = "";
+function judgePrime($m)
+{
+    if ($m == 1) {
+        return true;
+    }
 
-function judgePrime($m){
-    if ($m==1) return true;
+    for ($i = 2; $i <= $m; $i++) {
+        if ($m % $i == 0) {
+            break;
+        }
+    }
 
-    for ($i=2; $i<=$m; $i++) if ($m%$i==0) break;
-    
-    if ($m==$i) return true;
-    else return false;
+    if ($m == $i) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
-for ($i=1; $i<=$n; $i++) if (judgePrime($i)) $ans .= " $i";
+function enumPrime($l)
+{
+    $primes = array();
 
-echo $ans;
+    for ($i = 1; $i <= $l; $i++) {
+        if (judgePrime($i)) {
+            array_push($primes, $i);
+        }
+    }
+
+    return $primes;
+}
+
+
+foreach (enumPrime(100) as $prime) {
+    echo "$prime ";
+}
 
 ?>

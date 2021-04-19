@@ -30,3 +30,4 @@ function getPrimeNumbers($tn) {
 print_r(getPrimeNumbers(10));
 
 ?>
+

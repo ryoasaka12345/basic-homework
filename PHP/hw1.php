@@ -10,3 +10,4 @@ for ($i = 0; $i <= 51; $i++) {
 echo "the sum of the odd numbers between 0 to 50 is $sum";
 
 ?>
+

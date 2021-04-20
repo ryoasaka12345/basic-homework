@@ -12,7 +12,7 @@ class Shape
     }
 }
 
-class triangle extends shape
+class Triangele extends Shape
 {
     function area()
     {
@@ -20,7 +20,7 @@ class triangle extends shape
     }
 }
 
-class rectangle extends Shape
+class Rectangle extends Shape
 {
     function area()
     {
@@ -29,8 +29,8 @@ class rectangle extends Shape
 }
 
 // test
-$tri = new triangle(10, 20);
-$rect = new rectangle(10, 20);
+$tri = new Triangle(10, 20);
+$rect = new Rectangle(10, 20);
 
 echo "tri: width=". $tri->width. ", height=". $tri->height. ", area=". $tri->area();
 echo "<br>";

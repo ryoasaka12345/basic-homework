@@ -12,7 +12,7 @@ class Shape
     }
 }
 
-class Triangele extends Shape
+class Triangle extends Shape
 {
     function area()
     {

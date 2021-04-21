@@ -54,11 +54,11 @@ class MailChimp extends Emailer
     public function sendEmail()
     {
         foreach ($this->recipients as $recipient) {
-        $result = mail($recipient, $this->subject, $this->body, "From: {$this->sender}\r\n");
-        echo "MailChimp successfully sent to {$recipient}\n";
-        echo "Sender: $this->sender\n";
-        echo "Subject: $this->subject\n";
-        echo "Content: $this->body\n";
+            $result = mail($recipient, $this->subject, $this->body, "From: {$this->sender}\r\n");
+            echo "MailChimp successfully sent to {$recipient}\n";
+            echo "Sender: $this->sender\n";
+            echo "Subject: $this->subject\n";
+            echo "Content: $this->body\n";
         }
     }
 }

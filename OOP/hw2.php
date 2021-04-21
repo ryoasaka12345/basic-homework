@@ -40,11 +40,11 @@ class SendGrid extends Emailer
     public function sendEmail()
     {
         foreach ($this->recipients as $recipient) {
-        $result = mail($recipient, $this->subject, $this->body, "From: {$this->sender}\r\n");
-        echo "SendGrid successfully sent to {$recipient}\n";
-        echo "Sender: $this->sender\n";
-        echo "Subject: $this->subject\n";
-        echo "Content: $this->body\n";
+            $result = mail($recipient, $this->subject, $this->body, "From: {$this->sender}\r\n");
+            echo "SendGrid successfully sent to {$recipient}\n";
+            echo "Sender: $this->sender\n";
+            echo "Subject: $this->subject\n";
+            echo "Content: $this->body\n";
         }
     }
 }
@@ -70,6 +70,6 @@ $sgEmailer->addRecipients("emailID@domain.com")->setSubject("Just a Test")->setB
 
 // MailChimp
 $mcEmailer = new MailChimp("youremail@yourdomain.com");
-$mcEmailer->addRecipients("emailID@domain.com")->setSubject("Just a Test")->setBody("Hi Name, How are you?")->sendEmail();
+    $mcEmailer->addRecipients("emailID@domain.com")->setSubject("Just a Test")->setBody("Hi Name, How are you?")->sendEmail();
 
 ?>

@@ -70,6 +70,6 @@ $sgEmailer->addRecipients("emailID@domain.com")->setSubject("Just a Test")->setB
 
 // MailChimp
 $mcEmailer = new MailChimp("youremail@yourdomain.com");
-    $mcEmailer->addRecipients("emailID@domain.com")->setSubject("Just a Test")->setBody("Hi Name, How are you?")->sendEmail();
+$mcEmailer->addRecipients("emailID@domain.com")->setSubject("Just a Test")->setBody("Hi Name, How are you?")->sendEmail();
 
 ?>

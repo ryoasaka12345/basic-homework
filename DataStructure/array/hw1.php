@@ -1,5 +1,6 @@
 <?php 
 
+
 class CalcValues
 {
     public $arr;
@@ -11,6 +12,13 @@ class CalcValues
 
     function __construct($arr)
     {
+        if ( gettype($arr) != "array" || $arr == []) {
+            echo "<br>";
+            echo "Incorrect input";
+            $this->arr = [];
+            return; 
+        }
+        
         $this->arr = $arr;
         $this->size = sizeof($arr);
         $this->sum = 0; 
@@ -51,22 +59,36 @@ class CalcValues
     }
 }
 
-// Ttest1
+// Test1
 $arr1 = [5, 12, 17, 9, 3];
 $Arr1 = new CalcValues($arr1);
 $Arr1->echoArray();
 $Arr1->echoValues();
 echo "<br>";
 
-// Ttest2
+// Test2
 $arr2 = [13, 4, 8, 14, 1];
 $Arr2 = new CalcValues($arr2);
 $Arr2->echoArray();
 $Arr2->echoValues();
 echo "<br>";
 
-// Ttest3
+// Test3
 $arr3 = [9, 5, 3, 7, 21];
+$Arr3 = new CalcValues($arr3);
+$Arr3->echoArray();
+$Arr3->echoValues();
+echo "<br>";
+
+// Test4
+$arr3 = [];
+$Arr3 = new CalcValues($arr3);
+$Arr3->echoArray();
+$Arr3->echoValues();
+echo "<br>";
+
+// Test5
+$arr3 = 5;
 $Arr3 = new CalcValues($arr3);
 $Arr3->echoArray();
 $Arr3->echoValues();

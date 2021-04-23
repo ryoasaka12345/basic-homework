@@ -1,6 +1,6 @@
 <?php
 
-class CalcValues
+class OperateArray
 {
     public $arr;
     public $avg;
@@ -8,20 +8,30 @@ class CalcValues
     public $min;
     public $max;
     public $size;
+    public $cnt;
 
     function __construct($arr)
     {
         if ( gettype($arr) != "array" || $arr == []) {
             echo "<br>";
-            echo "Incorrect input";
+            echo "Incorrect input <br>";
             $this->arr = [];
             return; 
         }
 
         $this->arr = $arr;
+    }
+
+    //calculate sum, avg, min, max
+    public function calcValues(){
+        if (gettype($this->arr) != "array" || $this->arr == []) {
+            echo "calcValues(): set correct array <br>";
+            return;
+        }
+
         $this->sum = 0; 
-        $this->min = $arr[0][0];
-        $this->max = $arr[0][0];
+        $this->min = $this->arr[0][0];
+        $this->max = $this->arr[0][0];
         $this->cnt = 0;
 
         foreach ($this->arr as $row) {
@@ -41,8 +51,14 @@ class CalcValues
         $this->avg = round($this->sum / $this->cnt);
     }
 
+    // output elements of the array
     public function echoArray()
     {
+        if (gettype($this->arr) != "array" || $this->arr == []) {
+            echo "echoArray(): set correct array <br>";
+            return;
+        }
+
         echo "<br>";
         echo "values:<br>";
         foreach($this->arr as $row) {
@@ -53,8 +69,14 @@ class CalcValues
         }
     }
 
+    // output sum, avg, min and max
     public function echoValues()
     {
+        if (gettype($this->arr) != "array" || $this->arr == []) {
+            echo "echoValues(): set correct array <br>";
+            return;
+        }
+
         echo "<br>";
         echo "AVG: ". $this->avg;
         echo ", SUM: ". $this->sum;
@@ -70,7 +92,8 @@ $array1 = [
     [13, 4, 8, 14, 1], 
     [9, 5, 3, 17, 21]
 ];
-$Arr1 = new CalcValues($array1);
+$Arr1 = new OperateArray($array1);
+$Arr1->calcValues();
 $Arr1->echoArray();
 $Arr1->echoValues();
 echo "<br>";
@@ -82,7 +105,8 @@ $array2 = [
     [13, 4, 8, 14, 1, 10, 20, 40], 
     [9, 5, 3, 17, 21]
 ];
-$Arr2 = new CalcValues($array2);
+$Arr2 = new OperateArray($array2);
+$Arr2->calcValues();
 $Arr2->echoArray();
 $Arr2->echoValues();
 echo "<br>"; 
@@ -90,7 +114,8 @@ echo "<br>";
 // test 3
 echo "<br>";
 $array3 = [];
-$Arr3 = new CalcValues($array3);
+$Arr3 = new OperateArray($array3);
+$Arr3->calcValues();
 $Arr3->echoArray();
 $Arr3->echoValues();
 echo "<br>"; 
@@ -98,7 +123,8 @@ echo "<br>";
 // test 4
 echo "<br>";
 $array4 = 0;
-$Arr4 = new CalcValues($array4);
+$Arr4 = new OperateArray($array4);
+$Arr4->calcValues();
 $Arr4->echoArray();
 $Arr4->echoValues();
 echo "<br>"; 

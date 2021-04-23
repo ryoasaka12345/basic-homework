@@ -106,4 +106,5 @@ $arrayC = addElements($arrayA, $arrayB);
 echo "Output C: ";
 print_r($arrayC);
 echo "<br>";
+
 ?>

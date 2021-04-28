@@ -5,4 +5,4 @@
 	- OOP
 	- Data Structure
 		- Array
-		-Linked Lists
+		- Linked Lists

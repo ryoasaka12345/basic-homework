@@ -29,9 +29,10 @@ class LinkedList_hw3 extends LinkedList
     */
     public function deleteHead()
     {
-        $tmp = $this->head->getData();
+        $tmp = $this->head;
         $this->head = $this->head->getNext();
-        return new Node($tmp, null);
+        $tmp->setNext(null);
+        return $tmp;
     }
 
     /**

@@ -2,7 +2,7 @@
 
 require ('stack.php');
 
-class Stack_hw1 extends Stack
+class PascalCase extends Stack
 {
     public function size()
     {
@@ -12,11 +12,12 @@ class Stack_hw1 extends Stack
 
 function hw1($words)
 {
-    $stack = new Stack_hw1();
+    $stack = new PascalCase();
 
-    for ($i=0; $i < count($words); $i++) {
+    $countWords = count($words);
+    for ($i = 0; $i < $countWords; $i++) {
         $top = $stack->top();
-        if ($top == $words[$i] ) {
+        if ($top === $words[$i] ) {
             $stack->pop();
         } else {
             $stack->push($words[$i]);

@@ -36,7 +36,7 @@ class Stack {
     */
     public function top()
     {
-           if (!$this->isEmpty()) {
+        if (!$this->isEmpty()) {
             return $this->elements[sizeof($this->elements) - 1];
         }
     

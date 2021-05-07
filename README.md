@@ -7,3 +7,4 @@
 		- Array
 		- Linked Lists
 		- Set
+		- Stack

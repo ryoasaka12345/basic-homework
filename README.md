@@ -8,3 +8,4 @@
 		- Linked Lists
 		- Set
 		- Stack
+		- Queue

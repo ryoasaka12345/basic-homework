@@ -9,7 +9,12 @@ class TreeHw extends BT
     {
         $queue = new Queue();
         $queue->enqueue($this->root);
-
+        
+        if ($this->root == null){
+            $this->setRoot(new Node($key));
+            return;
+        }
+        
         while (!$queue->isEmpty()) {
             $current = $queue->front();
             $queue->dequeue();
@@ -34,6 +39,11 @@ class TreeHw extends BT
     {
         $l = 0; // level
         $w = 0; // width
+        
+        if ($this->root == null) {
+            echo "<br> null <br>";
+            return;
+        }
 
         $queue = new Queue();
         $queue->enqueue($this->root);
@@ -70,7 +80,8 @@ class TreeHw extends BT
             }
 
             $w += 1;
-        } 
+        }
+        echo "<br>"; 
     }
 }
 
@@ -104,6 +115,17 @@ echo "<br>";
 
 echo "<br> ===insert 12 to the first position===";
 $bt->insertFirst(12);
+$bt->lookOver();
+
+// Test2
+echo "<br>";
+$bt = new TreeHw(null);
+
+echo "===initial BT===";
+$bt->lookOver();
+
+echo "<br> ===insert 10===";
+$bt->insertFirst(10);
 $bt->lookOver();
 
 ?>

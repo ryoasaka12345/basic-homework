@@ -9,3 +9,4 @@
 		- Set
 		- Stack
 		- Queue
+		- Tree

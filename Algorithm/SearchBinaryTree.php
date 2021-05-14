@@ -42,14 +42,18 @@ class SearchBinaryTree extends BinaryTree
         if($node == null) 
             return;
 
-        $this->traverseInOrder($node->getLeft(), $k);
+        if ($k > 0) 
+            $this->traverseInOrder($node->getLeft(), $k);
+
         if ($k > 0) {
             $tmp = $node->getData();
             echo "[". $tmp[0]. ", ". $tmp[1]. "]";
             echo "<br>";
             $k -= 1;
-            $this->traverseInOrder($node->getRight(), $k);
         }
+
+        if($k > 0)
+            $this->traverseInOrder($node->getRight(), $k);
     }
 }  
 ?>

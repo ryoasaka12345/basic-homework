@@ -1,40 +1,116 @@
 <?php
 
-require('SearchBinaryTree.php');
+function partition(&$sums, &$pairs, $left, $right)
+{
+    $pivot = $sums[($right+$left) / 2];
+    $i = $left;
+    $j = $right;
+    while ($i <= $j) {
+        while ($sums[$i] < $pivot) $i++;
+        while ($sums[$j] > $pivot) $j--;
 
-function pushPairs($BST, $arr1, $arr2)
+        if ($i <= $j) {
+            // swap sums[$i] and sums[$j]
+            $temp = $sums[$i];
+            $sums[$i] = $sums[$j];
+            $sums[$j] = $temp;
+            // swap pairs[$i] and pairs[$j]
+            $temp = $pairs[$i];
+            $pairs[$i] = $pairs[$j];
+            $pairs[$j] = $temp;
+
+            $i++;
+            $j--;
+        }
+    }
+
+    return $i;
+    // $array[ <  $i] is smaller than $pivot
+    // $array[ >= $i] is greater or equal $pivot
+}
+
+function quicksort(&$sums, &$pairs, $left, $right)
+{
+    if($left < $right) {
+        $pivotIndex = partition($sums, $pairs, $left, $right);
+        quicksort($sums, $pairs, $left, $pivotIndex - 1);
+        quicksort($sums, $pairs, $pivotIndex, $right);
+    }
+}
+
+function printArray($array) 
+{
+    echo "<br>[";
+    foreach ($array as $elem) {
+        echo "$elem ";
+    }
+    echo "]";
+}
+
+function genPairs($arr1, $arr2, &$sums, &$pairs)
 {
     foreach ($arr1 as $elem1){
         foreach ($arr2 as $elem2){
-            $BST->insert([$elem1, $elem2]);
+            $pairs[] = [$elem1, $elem2];
+            $sums[] = $elem1 + $elem2;
         }
     }
 }
-    
-// test 1
-$BST = new SearchBinaryTree();
+
+// test1
+$k = 3;
 $arr1 = [11, 7, 1];
 $arr2 = [4, 6, 2];
-$k = 3;
-pushPairs($BST, $arr1, $arr2);
-$BST->traverseInOrder($BST->getRoot(), $k); // output
+printArray($arr1);
+printArray($arr2);
+
+$pairs = [];
+$sums = [];
+genPairs($arr1, $arr2, $sums, $pairs);
+quickSort($sums, $pairs, 0, count($sums)-1);
 
 echo "<br>";
-// test 2
-$BST = new SearchBinaryTree();
+for ($i = 0; $i < $k; $i++) {
+    echo "[", $pairs[$i][0] , ", ", $pairs[$i][1], "] "; 
+}
+
+echo "<br>";
+
+// test2
+$k = 3;
+$arr1 = [11, 7];
+$arr2 = [4, 6];
+printArray($arr1);
+printArray($arr2);
+
+$pairs = [];
+$sums = [];
+genPairs($arr1, $arr2, $sums, $pairs);
+quickSort($sums, $pairs, 0, count($sums)-1);
+
+echo "<br>";
+for ($i = 0; $i < $k; $i++) {
+    echo "[", $pairs[$i][0] , ", ", $pairs[$i][1], "] "; 
+}
+
+echo "<br>";
+
+// test1
+$k = 3;
 $arr1 = [4, 6, 2];
 $arr2 = [11, 7, 1];
-$k = 3;
-pushPairs($BST, $arr1, $arr2);
-$BST->traverseInOrder($BST->getRoot(), $k); // output
+printArray($arr1);
+printArray($arr2);
+
+$pairs = [];
+$sums = [];
+genPairs($arr1, $arr2, $sums, $pairs);
+quickSort($sums, $pairs, 0, count($sums)-1);
 
 echo "<br>";
-// test 3
-$BST = new SearchBinaryTree();
-$arr1 = [1, 2, 3, 4, 5];
-$arr2 = [6, 7, 8, 9, 10, 11, 12];
-$k = 5;
-pushPairs($BST, $arr1, $arr2);
-$BST->traverseInOrder($BST->getRoot(), $k); // output   
+for ($i = 0; $i < $k; $i++) {
+    echo "[", $pairs[$i][0] , ", ", $pairs[$i][1], "] "; 
+}
 
+echo "<br>";
 ?>

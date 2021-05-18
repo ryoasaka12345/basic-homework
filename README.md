@@ -10,3 +10,4 @@
 		- Stack
 		- Queue
 		- Tree
+	- Algorithm

@@ -8,6 +8,7 @@ USE sql_test;
         - `WORKING_AREA` of `agents table must be `London`
         - `CUST_COUNTRY` of `customer` table must be `UK`
 */
+
 DROP TABLE IF EXISTS `new_agents`;
 
 CREATE TABLE new_agents AS

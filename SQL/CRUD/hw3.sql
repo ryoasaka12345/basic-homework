@@ -6,7 +6,7 @@ who are in grade 3
     and their agent should have earned a commission is less than .12%
  */
 
-USE sql_test;
+use sql_test_asaka;
 
 SELECT * FROM customer
 WHERE

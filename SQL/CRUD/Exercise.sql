@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS sql_test;
-CREATE DATABASE sql_test;
+DROP DATABASE IF EXISTS sql_test_asaka;
+CREATE DATABASE sql_test_asaka;
 
-USE sql_test;
+use sql_test_asaka;
 
 -- create agents
 CREATE TABLE `agents` (

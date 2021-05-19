@@ -1,4 +1,4 @@
-USE sql_test;
+use sql_test_asaka;
 
 /* 
 <problem>

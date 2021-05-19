@@ -4,7 +4,7 @@ Write a update query to modified value for 'commission' is 'commission'-.02
 for agents who have minimum payment amount of 'customer' table
  */
 
-USE sql_test;
+use sql_test_asaka;
 
 SELECT * FROM agents;
 

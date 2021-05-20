@@ -8,16 +8,18 @@ who are in grade 3
 
 use sql_test_asaka;
 
-SELECT * FROM customer
+SELECT 
+    * 
+FROM
+    customer
 WHERE
     GRADE = 3
-    AND
+AND
     CUST_COUNTRY != 'india'
-    AND
+AND
     OPENING_AMT <= 7000
-    AND
-    (
-        SELECT COMMISSION
-        FROM agents 
-        WHERE customer.AGENT_CODE = agents.AGENT_CODE
+AND (
+    SELECT COMMISSION
+    FROM agents 
+    WHERE customer.AGENT_CODE = agents.AGENT_CODE
     ) < 0.12;

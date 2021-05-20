@@ -12,14 +12,17 @@ use sql_test_asaka;
 DROP TABLE IF EXISTS `new_agents`;
 
 CREATE TABLE new_agents AS
-    SELECT DISTINCT agents.*
-    FROM  agents, customer
+    SELECT DISTINCT
+        agents.*
+    FROM
+        agents, customer
     WHERE
         agents.WORKING_AREA = 'London'
-        AND
+    AND
         agents.AGENT_CODE = customer.AGENT_CODE
-        AND
+    AND
         customer.CUST_COUNTRY = 'UK';
+        
 ALTER TABLE new_agents ADD PRIMARY KEY(AGENT_CODE);
 
 -- Check

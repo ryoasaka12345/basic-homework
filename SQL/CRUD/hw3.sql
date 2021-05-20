@@ -20,4 +20,4 @@ WHERE
         SELECT COMMISSION
         FROM agents 
         WHERE customer.AGENT_CODE = agents.AGENT_CODE
-    ) <= 0.12;
+    ) < 0.12;

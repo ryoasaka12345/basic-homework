@@ -20,5 +20,8 @@ CREATE TABLE new_agents AS
         agents.AGENT_CODE = customer.AGENT_CODE
         AND
         customer.CUST_COUNTRY = 'UK';
+ALTER TABLE new_agents ADD PRIMARY KEY(AGENT_CODE);
 
+-- Check
 SELECT * FROM new_agents;
+SHOW COLUMNS FROM new_agents;

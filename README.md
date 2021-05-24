@@ -11,3 +11,5 @@
 		- Queue
 		- Tree
 	- Algorithm
+- SQL
+	- CRUD

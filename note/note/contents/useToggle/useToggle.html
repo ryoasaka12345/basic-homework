@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>use toggle</title>
+        <style>
+            #box3 {
+                width: 130px;
+                height: 80px;
+                border: 1px solid black;
+            }
+            .cssTest3 {
+                font-size: 14px;
+                background-color: mistyrose;
+            }
+        </style>
+        <script>
+            function clickBtn4() {
+                const qsl = document.querySelector("#box3");
+                qsl.classList.toggle("cssTest3");
+            }
+        </script>
+    </head>
+    <body>
+        <div id="box3">box</div>
+        <input type="button" value="button" onclick="clickBtn4()" />
+    </body>
+</html>

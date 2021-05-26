@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Button Click</title>
+		<script language="javascript">
+			function OnButtonClick() {
+				target = document.getElementById("output");
+				target.innerHTML = "Penguin";
+			}
+		</script>
+	</head>
+	<body>
+		<input type="button" value="Exec" onclick="OnButtonClick();" />
+		<a href="javascript:void(0);" onclick="OnButtonClick();">test</a>
+		<div id="output"></div>
+	</body>
+</html>

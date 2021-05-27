@@ -18,4 +18,4 @@ GROUP BY
 HAVING
     CNT < 3
 ORDER BY
-    2, 3 DESC;
+    AVG, CNT DESC;

@@ -1,0 +1,226 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/*
+
+Header
+
+*/
+header {
+	display: grid;
+	height: 100px;
+	grid-template-columns: 20% 50% 30%;
+	justify-content: center;
+	align-content: center;
+
+	position: relative;
+	background-color: #5f524f;
+	padding: 20px;
+}
+
+#logo {
+	border: 1px solid #fff;
+	padding: 10px;
+	width: 50%;
+}
+
+#slogan {
+	color: #fff;
+	font-weight: normal;
+	font-size: 1.5em;
+	font-family: "EB Garamond", serif;
+	letter-spacing: 0.1em;
+	line-height: 1.5em;
+	text-transform: uppercase;
+	text-shadow: 0.07em 0.07em 0 rgba(0, 0, 0, 0.1);
+	padding-top: 0.1em;
+}
+
+#slogan::before,
+.slogan::after {
+	content: "§";
+	display: inline-block;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+	opacity: 0.2;
+	margin: 0 0.5em;
+	font-size: 1em;
+}
+
+#search form {
+	float: right;
+	margin-top: 14px;
+	position: relative;
+	width: 170px;
+	height: 40%;
+}
+
+#search form input {
+	padding: 6px;
+}
+
+#search form i {
+	position: absolute;
+	right: 0px;
+	top: 8px;
+	color: green;
+}
+
+#login {
+	position: absolute;
+	right: 35px;
+	top: -80px;
+}
+
+#login ul {
+	font-size: 60px;
+}
+
+#login li {
+	display: inline-block;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#login #Form {
+	border: 1px solid black;
+	background-color: white;
+	z-index: 1;
+	position: absolute;
+	top: 130px;
+	right: 5px;
+
+	width: 350px;
+	height: 200px;
+
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#login input[type="text"] {
+	background-color: blanchedalmond;
+	border-radius: 10px;
+	width: 250px;
+	height: 40px;
+	margin: 5px;
+}
+
+#login input[type="button"] {
+	width: 230px;
+	height: 40px;
+	border-radius: 20px;
+	background-color: greenyellow;
+}
+
+#login a {
+	color: white;
+}
+
+/* 
+
+Navigation bar
+
+*/
+nav {
+	border: 1px solid #ccc;
+}
+
+nav ul {
+	/* allow centering to work  */
+	display: table;
+	margin: 0 auto;
+}
+
+nav ul li {
+	display: inline-block;
+	height: 15px;
+	padding: 20px;
+}
+
+/* 
+
+Main contents & Side bar
+
+*/
+#main {
+	display: grid;
+	grid-template-columns: 75% auto;
+	grid-column-gap: 10px;
+	min-height: 500px;
+}
+
+#main-content,
+#sidebar {
+	padding: 5px 20px;
+	border: 1px solid;
+}
+
+#sidebar ul li {
+	padding: 10px 0;
+}
+
+#main table {
+	width: 100%;
+}
+
+#main table th {
+	text-align: left;
+	height: 40px;
+}
+
+#main table td {
+	text-align: left;
+	height: 40px;
+}
+
+#main table tbody:nth-child(even) {
+	background-color: rgba(128, 128, 128, 0.466);
+}
+
+#main p {
+	color: black;
+	font-weight: bold;
+	font-size: 1.5em;
+	font-family: "EB Garamond", serif;
+	letter-spacing: 0.1em;
+	line-height: 1.5em;
+}
+
+/* 
+
+Footer
+
+*/
+footer {
+	background-color: #5f524f;
+	padding: 20px;
+
+	display: grid;
+	grid-template-columns: auto 75%;
+}
+
+#scroll {
+	width: 40px;
+	height: 40px;
+
+	position: fixed;
+	right: 30px;
+	bottom: 30px;
+
+	background-color: rgba(2, 129, 1, 0.85);
+	text-align: center;
+}
+
+#scroll a {
+	color: #fff;
+}
+#scroll i {
+	margin-top: 8px;
+}

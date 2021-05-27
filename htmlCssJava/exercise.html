@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>My web page</title>
+		<link rel="stylesheet" , href="exercise.css" />
+		<link
+			rel="stylesheet"
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+		/>
+		<script src="exercise.js"></script>
+	</head>
+	<body>
+		<!-- 
+
+			Header
+
+		-->
+		<header>
+			<div id="logo">The logo</div>
+			<div id="slogan" class="slogan">The header slogan</div>
+			<div id="login">
+				<ul>
+					<li>Hi Guest</li>
+					<li>
+						<a href="javascript:void(0);" onclick="openMenu()"> Login </a>
+					</li>
+				</ul>
+				<div id="Form">
+					<input type="text" value="Username" />
+					<input type="text" value="Password" />
+					<div>
+						<input type="checkbox" name="remember un" />
+						Remember username
+					</div>
+					<input type="button" name="Login" value="LOGIN" />
+				</div>
+			</div>
+			<div id="search">
+				<form method="GET">
+					<input type="text" name="keyword" />
+					<i class="material-icons">search</i>
+				</form>
+			</div>
+		</header>
+
+		<!-- 
+
+			Navigation bar 
+
+		-->
+		<nav>
+			<ul>
+				<li>Menu 1</li>
+				<li>Menu 2</li>
+				<li>Menu 3</li>
+				<li>Menu 4</li>
+			</ul>
+		</nav>
+
+		<!-- 
+
+			Main contents & Side bar
+
+		-->
+		<div id="main">
+			<div id="main-content">
+				<p>Users</p>
+				<table>
+					<tbody>
+						<th>ID</th>
+						<th>Fullname</th>
+						<th>Username</th>
+						<th>Email</th>
+					</tbody>
+					<tbody>
+						<td>1</td>
+						<td>Doloremque Laudantium</td>
+						<td>doloremoque</td>
+						<td>doloremoque@example.com</td>
+					</tbody>
+					<tbody>
+						<td>2</td>
+						<td>Nemo enim</td>
+						<td>nemo</td>
+						<td>nemo@example.com</td>
+					</tbody>
+					<tbody>
+						<td>3</td>
+						<td>Adipisci Velit</td>
+						<td>adipisci</td>
+						<td>adipisci velit@example.com</td>
+					</tbody>
+				</table>
+			</div>
+			<div id="sidebar">
+				<h3>Sidebar</h3>
+				<ul>
+					<li>Feature 1</li>
+					<li>Feature 2</li>
+					<li>Feature 3</li>
+					<li>Feature 4</li>
+					<li>Feature 5</li>
+					<li>Feature 6</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- 
+
+			Foorter
+
+		-->
+		<footer>
+			<ol>
+				<li>Extra info 1</li>
+				<li>Extra info 1</li>
+			</ol>
+			<h3>The footer</h3>
+			<div id="scroll">
+				<a href="javascript:void(0);" onclick="scrollToTop()">
+					<i class="material-icons">arrow_drop_up</i>
+				</a>
+			</div>
+		</footer>
+	</body>
+</html>

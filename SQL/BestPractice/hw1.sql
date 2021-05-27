@@ -5,16 +5,17 @@ following condition:
 number of agents for each group of 'working_area' mus be less than 3
 
  */
+USE sql_test;
 
 SELECT
     working_area,
-    avg(commission),
-    count(agent_name)
+    avg(commission) AS AVG,
+    count(agent_name) AS CNT
 FROM
     agents
 GROUP BY
     working_area
 HAVING
-    count(agent_name) < 3
+    CNT < 3
 ORDER BY
     2, 3 DESC;

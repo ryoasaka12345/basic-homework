@@ -58,7 +58,7 @@ window.addEventListener('load', () => {
 
 */
 function openMenu() {
-    const form = document.querySelector("#Form");
+    const form = document.querySelector("#form1");
     if (form.style.display == 'none') {
         form.style.display = 'flex';
     } else {
@@ -68,7 +68,7 @@ function openMenu() {
 
 window.addEventListener('click', (e) => {
     if (!e.target.closest('#login')) {
-        const form = document.querySelector("#Form");
+        const form = document.querySelector("#form1");
         form.style.display = 'none';
     }
 });

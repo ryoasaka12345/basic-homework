@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>taxt box</title>
+		<script>
+			function changeAll() {
+				const items = document.querySelectorAll(".item");
+				const parent = document.querySelector("#parent");
+
+				for (i = 0; i < items.length; i++) {
+					if (parent.checked) {
+						items[i].checked = true;
+					} else {
+						items[i].checked = false;
+                    }
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type="checkbox" class="item" value="left" />
+		<input type="checkbox" class="item" value="center" />
+		<input type="checkbox" class="item" value="right" />
+		<p><input type="checkbox" class="#parent" onchange="changeAll()" /></p>
+	</body>
+</html>

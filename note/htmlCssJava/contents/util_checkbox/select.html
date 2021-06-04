@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>outputSelected</title>
+		<script>
+			function outputSelected() {
+				const arr = [];
+				const items = document.querySelectorAll(".item");
+
+				for (i=0; i < items.length; i++) {
+					if (items[i].checked) {
+						arr.push(items[i].value);
+					}
+				}
+
+				document.querySelector(".output").textContent = arr;
+			}
+		</script>
+		<body>
+			<input type="checkbox" class="item" value="left">
+			<input type="checkbox" class="item" value="center">
+			<input type="checkbox" class="item" value="right">
+			<input type="button" value="push" onclick="outputSelected()">
+			<p><span class="output"></span></p>
+		</body>
+	</head>
+</html>
